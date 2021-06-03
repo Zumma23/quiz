@@ -6,7 +6,7 @@ function App() {
   const [users, setUsers] = useState([]);
   const [connect, setConnect] = useState(false);
   useEffect(() => {
-    fetch("/api/auth/users")
+    fetch("https://stormy-peak-20800.herokuapp.com/api/auth/users")
       .then((res) => {
         if (res.ok) {
           return res.json();
