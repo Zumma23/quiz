@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
+import AuthPage from "./components/AuthPage";
 
 function App() {
   const [users, setUsers] = useState([]);
   const [connect, setConnect] = useState(false);
   useEffect(() => {
-    fetch("/users")
+    fetch("/api/auth/users")
       .then((res) => {
         if (res.ok) {
           return res.json();
@@ -15,11 +16,14 @@ function App() {
         setUsers(jsonR);
         setConnect(true);
       });
-  });
+  },[]);
   return <div className="App">
+    <AuthPage/>
     {users.map((u:any) => 
     <div key={u.id}>{u.email}</div>
-    )}</div>;
+    )}
+    
+    </div>;
 }
 
 export default App;

@@ -11,6 +11,8 @@ const app = express();
 app.use(bodyParser.json())
 app.use(cors())
 
+app.use("/api/auth", require("./routes/auth.route"));
+
 
 mongoose.connect(
   "mongodb+srv://admin:admin@cluster0.gb9yh.mongodb.net/quiz?retryWrites=true&w=majority",
@@ -27,11 +29,28 @@ const userSchema = {
   email: String,
   password: String,
 };
-const User = mongoose.model("User", userSchema);
+// const User = mongoose.model("User", userSchema);
 
-app.get("/users", function (req, res) {
-  User.find().then((users) => res.json(users));
-});
+// app.get("/users", function (req, res) {
+//   User.find().then((users) => res.json(users));
+// });
+
+
+// app.post("/registration", async (req, res) => {
+//   const { email, password } = req.body;
+
+//   const isUsed = await User.findOne({ email });
+//   if (isUsed) {
+//     return res.status(300).json({ message: "Занято" });
+//   }
+
+//   const user = new User({
+//     email,
+//     password,
+//   });
+//   await user.save();
+//   res.status(201).json({ message: "Создан" });
+// });
 
 
 
