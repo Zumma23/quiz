@@ -18,10 +18,11 @@ function App() {
       });
   },[]);
   return <div className="App">
-    <AuthPage/>
+   
     {users.map((u:any) => 
     <div key={u.id}>{u.email}</div>
     )}
+     <AuthPage/>
     
     </div>;
 }
