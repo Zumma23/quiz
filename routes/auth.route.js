@@ -33,45 +33,45 @@ router.post(
 
 
 
-router.post("/login",
-[
-  check('email', 'Incorect email').isEmail(),
-  check('password','Incorect password')
-],
-async (req, res) => {
-  try {
+// router.post("/login",
+// [
+//   check('email', 'Incorect email').isEmail(),
+//   check('password','Incorect password')
+// ],
+// async (req, res) => {
+//   try {
 
-    const errors = validationResult(req)
-    if(!errors.isEmpty()){
-      return res.status(400).json({
-        errors: errors.array(),
-        message: 'Incorect data from registration'
-      })
-    }
-    const { email, password } = req.body;
+//     const errors = validationResult(req)
+//     if(!errors.isEmpty()){
+//       return res.status(400).json({
+//         errors: errors.array(),
+//         message: 'Incorect data from registration'
+//       })
+//     }
+//     const { email, password } = req.body;
 
-    const user = await User.findOne({email})
-    if(!user){
-      return res.status(400).json({message: 'Такого Email нет в базе'})
-    }
+//     const user = await User.findOne({email})
+//     if(!user){
+//       return res.status(400).json({message: 'Такого Email нет в базе'})
+//     }
 
-    const isMatch = bcrypt.compare(password, user.password)
-    if(!isMatch){
-      return res.status(400).json({message: 'Password is not corect'})
-    }
+//     const isMatch = bcrypt.compare(password, user.password)
+//     if(!isMatch){
+//       return res.status(400).json({message: 'Password is not corect'})
+//     }
 
-    const jwtSecret= '7812738ее21738е7132е78е712378е1е78123'
-    const token = jwt.sign(
-      {userId: user.id},
-      jwtSecret,
-      {expiresIn: '1h'}
-    )
+//     const jwtSecret= '7812738ее21738е7132е78е712378е1е78123'
+//     const token = jwt.sign(
+//       {userId: user.id},
+//       jwtSecret,
+//       {expiresIn: '1h'}
+//     )
 
-    res.json({token,userId:user.id})
+//     res.json({token,userId:user.id})
 
-  } catch (err) {
-    console.log(err);
-  }
-});
+//   } catch (err) {
+//     console.log(err);
+//   }
+// });
 
 module.exports = router;
