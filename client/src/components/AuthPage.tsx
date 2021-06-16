@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import axios from "axios";
+// import axios from "axios";
 
 export default function AuthPage() {
   // const history = useHistory();
@@ -16,18 +16,18 @@ export default function AuthPage() {
     console.log(form);
   };
 
-  const registerHandler = async () => {
-    try {
-      await axios.post(
-        "/api/auth/registration",
-        { ...form },
-        // { headers: { "Content-Type": "aplication/json" } }
-      );
-      // history.push("/");
-    } catch (err) {
-      console.log(err);
-    }
-  };
+  // const registerHandler = async () => {
+  //   try {
+  //     await axios.post(
+  //       "/api/auth/registration",
+  //       { ...form },
+  //       // { headers: { "Content-Type": "aplication/json" } }
+  //     );
+  //     // history.push("/");
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+  // };
   // const loginHandler = async () => {
   //   try {
   //     await axios
@@ -73,7 +73,7 @@ export default function AuthPage() {
                 <div className="row">
                   <button
                     className="wawes-effect wawes-light btn  blue "
-                    onClick={registerHandler}
+                    // onClick={registerHandler}
                   >
                     Регистрация
                   </button>
