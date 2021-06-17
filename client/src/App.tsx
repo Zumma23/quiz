@@ -1,10 +1,17 @@
-import React, { useState, useEffect } from "react";
-import AppRouter from "./components/AppRouter";
+import React, { FC, useState, useEffect } from "react";
 import NavBar from "./components/NavBar/NavBar";
-
-function App() {
+import { useSelector, useDispatch } from "react-redux";
+import { Switch, Redirect, Route } from "react-router-dom";
+import { auth } from "./redux/actions/userAction";
+import { authRoutes, publicRouters } from "./routes";
+import { MAIN_ROUTE } from "./utils/consts";
+const App: FC = () => {
   const [users, setUsers] = useState([]);
   const [connect, setConnect] = useState(false);
+  const isAuth = useSelector((state: any) => state.user.isAuth);
+
+  const dispatch = useDispatch();
+
   useEffect(() => {
     fetch("https://stormy-peak-20800.herokuapp.com/api/auth/users")
       .then((res) => {
@@ -12,22 +19,32 @@ function App() {
           return res.json();
         }
       })
-      .then((jsonR) => {
-        setUsers(jsonR);
+      .then((json) => {
+        setUsers(json);
         setConnect(true);
       });
   }, []);
-  console.log(users)
+
+  useEffect(() => {
+    dispatch(auth());
+  }, []);
+
   return (
     <div className="App">
       <NavBar />
-      <AppRouter />
-      <div className="row">
-        <div className="col" style={{fontSize:100}}>
-        Для осуществления хозяйственной деятельности каждое предприятие использует не только собственные ресурсы, но и привлеченный (заемный) капитал. Предприятие, которое предусматривает источником пополнения оборотных средств в основном долгосрочные и текущие обязательства, то есть кредиторскую задолженность и краткосрочный банковский кредит, рискует возможностью не привлечь вовремя нужную сумму денег, и тогда оно может оказаться неплатежеспособным. В связи с этим организация должна следить за своевременным погашением текущих обязательств и при помощи проведения анализа предотвращать неблагоприятные тенденции – наличие просроченных обязательств.        </div>
-      </div>
+      <Switch>
+        {isAuth
+          ? authRoutes.map(({ path, Component }) => (
+              <Route key={path} path={path} component={Component} exact />
+            ))
+          : publicRouters.map(({ path, Component }) => (
+              <Route key={path} path={path} component={Component} exact />
+            ))}
+        <Redirect to={MAIN_ROUTE} />
+      </Switch>
+      {/* <AppRouter/> */}
     </div>
   );
-}
+};
 
 export default App;

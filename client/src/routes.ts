@@ -24,6 +24,10 @@ export const authRoutes = [
     path: CREATE_ROUTE,
     Component: CreateQuestions,
   },
+  {
+    path: MAIN_ROUTE,
+    Component: Main,
+  },
 ];
 
 export const publicRouters = [

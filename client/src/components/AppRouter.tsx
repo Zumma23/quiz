@@ -14,14 +14,14 @@ const AppRouter: FC = () => {
   }, []);
   return (
     <Switch>
-      {isAuth
+      {!isAuth
         ? authRoutes.map(({ path, Component }) => (
             <Route key={path} path={path} component={Component} exact />
           ))
         : publicRouters.map(({ path, Component }) => (
             <Route key={path} path={path} component={Component} exact />
           ))}
-      <Redirect to={MAIN_ROUTE} />
+      {/* <Redirect to={MAIN_ROUTE} /> */}
     </Switch>
   );
 };
