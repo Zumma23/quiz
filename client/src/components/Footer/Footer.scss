@@ -1,0 +1,68 @@
+@import "../../scss/variables";
+
+.footer {
+  margin: 100px 0;
+  background-color: rgba(31, 40, 51, 0.7);
+  padding: 40px 0;
+  &__info {
+    &-title {
+      color: $gray;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+    &-text {
+      color: $gray;
+      font-size: 20px;
+    }
+    &-question{
+      margin: 20px 0;
+      &-title{
+        color:$gray;
+        font-size:18px;
+      }
+      &-input{
+        margin: 10px 0;
+        width: 300px;
+      }
+      &-button{
+        margin: 0 0 0 10px;
+        border: 0;
+
+        color:  #1F2833;
+        background: #45A29E;
+        padding: 5px 15px;
+        border-radius: 15px;
+        text-decoration: none;
+        font-weight: 700;
+        transition: 0.5s;
+        &:hover{
+          color:  #1F2833 ;
+          background: #c5c6c7;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  &__social {
+    list-style: none;
+    &-item{
+      margin: 10px 0;
+    }
+    &-img{
+      width: 20px;
+      background: #45A29E;
+      border-radius: 5px;
+    }
+    &-link {
+      text-decoration: none;
+      color: $main_color;
+      font-size: 18px;
+      font-weight: 700;
+      transition: $transition;
+      &:hover{
+        text-decoration: none;
+        color: $gray;
+      }
+    }
+  }
+}

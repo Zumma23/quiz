@@ -1,0 +1,18 @@
+.game {
+  &-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  &__suptitle{
+    color: #c5c6c7;
+  }
+  &__score{
+    color: #45A29E;
+  }
+  }
+  &-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

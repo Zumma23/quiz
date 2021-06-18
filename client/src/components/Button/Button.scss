@@ -1,0 +1,22 @@
+@import "../../scss/variables";
+
+
+.buttom {
+  border: none;
+  font-weight: bold;
+  margin: 10px 0;
+  color: $background;
+  background: $main_color;
+  padding: 10px 30px;
+  border-radius: 15px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.5s;
+  outline: none;
+  &:hover {
+    color: $background;
+    background: $gray;      
+    text-decoration: none;
+  }
+}
+

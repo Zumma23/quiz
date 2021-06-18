@@ -1,6 +1,4 @@
-@import "../scss/variables.scss";
-
-
+@import "../../scss/variables";
 .nav {
   // background-color: #4D6D9A;
   padding: 20px 0;
@@ -27,10 +25,8 @@
     text-transform: uppercase;
     transition: $transition;
     font-weight: 700;
-    font-family: 'Itim', cursive;
+    font-family: "Itim", cursive;
     text-decoration: none;
-
-
 
     &::before {
       content: "";
@@ -40,14 +36,14 @@
     }
     &:hover {
       background-color: $gray;
-      color:  $background;
+      color: $background;
       text-decoration: none;
 
       &::before {
         content: "";
         display: block;
         height: 5px;
-        background:  $background;
+        background: $background;
       }
     }
   }
@@ -59,37 +55,37 @@
   }
 
   &__login {
+    display: flex;
     padding: 10px 15px;
-    &::after {
-      content: "";
-      display: block;
-      height: 5px;
-      background: $gray;
-    }
-    &:hover {
-      background-color:$gray;
-      color: $background;
+    &-title {
       transition: $transition;
+      color: $main_color;
       text-decoration: none;
-
+      font-weight: 700;
+      margin-left: 20px;
+      padding: 10px;
       &::after {
         content: "";
         display: block;
         height: 5px;
-        background: $background;
+        background: $gray;
       }
-    }
-    &-title {
-      transition: $transition;
-      color:$main_color;
-      text-decoration: none;
-      font-weight: 700;
+      &:hover {
+        background-color: $gray;
+        color: $background;
+        transition: $transition;
+        text-decoration: none;
 
-       &:hover {
-      color: $background;
-      transition: $transition;
-      text-decoration: none;
-    }
+        &::after {
+          content: "";
+          display: block;
+          height: 5px;
+          background: $background;
+        }
+      }
+      &:hover {
+        color: $background;
+      }
     }
   }
 }
@@ -98,7 +94,7 @@
   .nav {
     // background-color: #4D6D9A;
     padding: 20px 0;
-  
+
     &::after {
       content: "";
       display: block;
@@ -109,7 +105,7 @@
     &__logo {
       display: flex;
       align-items: center;
-  
+
       &-img {
         // width: 100px;
       }
@@ -121,9 +117,8 @@
       text-transform: uppercase;
       transition: $transition;
       font-weight: 700;
-      font-family: 'Itim', cursive;
-  
-  
+      font-family: "Itim", cursive;
+
       &::before {
         content: "";
         display: block;
@@ -132,14 +127,14 @@
       }
       &:hover {
         background-color: $gray;
-        color:  $background;
+        color: $background;
         text-decoration: none;
-  
+
         &::before {
           content: "";
           display: block;
           height: 5px;
-          background:  $background;
+          background: $background;
         }
       }
     }
@@ -149,21 +144,21 @@
       justify-content: space-between;
       // background-color: #86B3D1
     }
-  
+
     &__login {
       padding: 5px 10px;
-            &::after {
+      &::after {
         content: "";
         display: block;
         height: 5px;
         background: $gray;
       }
       &:hover {
-        background-color:$gray;
+        background-color: $gray;
         color: $background;
         transition: $transition;
         text-decoration: none;
-  
+
         &::after {
           content: "";
           display: block;
@@ -173,20 +168,17 @@
       }
       &-title {
         transition: $transition;
-        color:$main_color;
+        color: $main_color;
         text-decoration: none;
         font-weight: 700;
         font-size: 10px;
-  
-         &:hover {
-        color: $background;
-        transition: $transition;
-        text-decoration: none;
-      }
+
+        &:hover {
+          color: $background;
+          transition: $transition;
+          text-decoration: none;
+        }
       }
     }
   }
-  
-
-
 }

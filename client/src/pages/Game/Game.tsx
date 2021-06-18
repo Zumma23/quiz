@@ -1,11 +1,26 @@
-import React, {FC} from "react";
+import React, { FC, useState, useEffect } from "react";
+import axios from "axios";
+import Quiz from "../../components/Quiz/Quiz";
+const Game: FC = () => {
 
-const Game:FC = ()=>{
-  return(
+  const [questions, setQuestions] = useState();
+
+
+  useEffect(() => {
+    axios.get("http://localhost:5000/api/find").then((res) => {
+      setQuestions(res.data);
+    });
+
+  }, []);
+
+
+
+  return (
     <>
-    <h1>Game</h1>
+      <h1>Game</h1>
+      <Quiz questions={questions} setQuestions={setQuestions}/>
     </>
-  )
-}
+  );
+};
 
-export default Game
+export default Game;

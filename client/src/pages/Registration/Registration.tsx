@@ -7,25 +7,32 @@ const Registration: FC = () => {
   const [password, setPassword] = useState("");
 
   return (
-    <div className="registration">
-          <h1>Регистрация</h1>
-
-      <div className="registration__inner">
-        <Input
-          value={email}
-          setValue={setEmail}
-          type="text"
-          placeholder="Email"
-        />
-        <Input
-          value={password}
-          setValue={setPassword}
-          type="password"
-          placeholder="Password"
-        />
-        <button onClick={()=> registration(email,password)} className="registrartion__btn">Войти</button>
+    <>
+       <div className="autorization">
+        <div className="autorization-wrapper">
+          <h3 className="autorization__title">Sign up for free</h3>
+          <div className="autorization__items">
+            <Input
+              value={email}
+              setValue={setEmail}
+              type="text"
+              placeholder="Email"
+            />
+            <Input
+              value={password}
+              setValue={setPassword}
+              type="password"
+              placeholder="Password"
+            />
+             <button onClick={()=> registration(email,password)} className="registrartion__btn button">Create free account</button>
+          
+           
+          </div>
+        </div>
       </div>
-    </div>
+
+    </>
+   
   );
 };
 

@@ -1,0 +1,30 @@
+
+.game-answers{
+  text-align: center;
+}
+.game-answer__button{
+  width: 100%;
+  padding: 10px;
+  border: 0;
+  border-radius: 15px;
+  margin: 10px 0;
+  background-color: #1f2833;
+  color: white;
+  transition: .4s;
+
+}
+.game-controls{
+  float: right;
+}
+
+.select {
+  background-color: rgb(7, 207, 0);
+  color: white;
+  box-shadow: 0 0 1px black;
+}
+
+.wrong {
+  background-color: rgb(233, 0, 0);
+  color: white;
+  box-shadow: 0 0 1px black;
+}

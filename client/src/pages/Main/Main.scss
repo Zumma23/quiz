@@ -1,0 +1,27 @@
+@import "../../scss/variables";
+
+
+.info {
+
+  &-slick{
+    margin-top: 100px;
+  }
+  &-inner {
+    margin-bottom: 100px;
+    background-color: rgba(31, 40, 51, 0.7);
+    padding: 40px 10px;
+    margin-bottom: 40px;
+    border-radius: 15px;
+  }
+  &-content {
+    &__suptitle {
+      color: $gray;
+
+    }
+    &__subtitle {
+      color: #45a29e;
+
+    }
+  }
+
+}

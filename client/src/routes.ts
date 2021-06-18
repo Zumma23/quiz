@@ -11,18 +11,22 @@ export const authRoutes = [
   {
     path: CABINET_ROUTE,
     Component: Cabinet,
+    
   },
   {
     path: RESULT_ROUTE,
     Component: Result,
+    
   },
   {
     path: GAME_ROUTE,
     Component: Game,
+    
   },
   {
     path: CREATE_ROUTE,
     Component: CreateQuestions,
+    
   },
   {
     path: MAIN_ROUTE,

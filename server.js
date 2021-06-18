@@ -4,6 +4,7 @@ const cors = require("cors");
 const path = require("path");
 const mongoose = require("mongoose")
 const autRoutes = require("./routes/auth.routes")
+const questionsRoutes = require("./routes/question.route")
 const corsMiddleware =require('./middleware/cors.middleware')
 
 const port = process.env.PORT || 5000
@@ -14,7 +15,7 @@ app.use(bodyParser.json())
 app.use(cors())
 
 app.use("/api/auth", autRoutes);
-
+app.use("/api", require('./routes/question.route'))
 
 
 const start = async()=>{

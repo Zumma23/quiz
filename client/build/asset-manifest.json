@@ -1,25 +1,31 @@
 {
   "files": {
-    "main.css": "/static/css/main.addff1dc.chunk.css",
-    "main.js": "/static/js/main.b2e72db9.chunk.js",
-    "main.js.map": "/static/js/main.b2e72db9.chunk.js.map",
+    "main.css": "/static/css/main.0b1eb2f5.chunk.css",
+    "main.js": "/static/js/main.48468971.chunk.js",
+    "main.js.map": "/static/js/main.48468971.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.a06e69b5.js",
     "runtime-main.js.map": "/static/js/runtime-main.a06e69b5.js.map",
     "static/css/2.53d92289.chunk.css": "/static/css/2.53d92289.chunk.css",
-    "static/js/2.faa7ce1e.chunk.js": "/static/js/2.faa7ce1e.chunk.js",
-    "static/js/2.faa7ce1e.chunk.js.map": "/static/js/2.faa7ce1e.chunk.js.map",
+    "static/js/2.1ee29235.chunk.js": "/static/js/2.1ee29235.chunk.js",
+    "static/js/2.1ee29235.chunk.js.map": "/static/js/2.1ee29235.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.53d92289.chunk.css.map": "/static/css/2.53d92289.chunk.css.map",
-    "static/css/main.addff1dc.chunk.css.map": "/static/css/main.addff1dc.chunk.css.map",
-    "static/js/2.faa7ce1e.chunk.js.LICENSE.txt": "/static/js/2.faa7ce1e.chunk.js.LICENSE.txt",
-    "static/media/slick-theme.css": "/static/media/slick.c94f7671.ttf",
-    "static/media/slider-1.a27bbc48.jpg": "/static/media/slider-1.a27bbc48.jpg"
+    "static/css/main.0b1eb2f5.chunk.css.map": "/static/css/main.0b1eb2f5.chunk.css.map",
+    "static/js/2.1ee29235.chunk.js.LICENSE.txt": "/static/js/2.1ee29235.chunk.js.LICENSE.txt",
+    "static/media/create.1651fb75.jpg": "/static/media/create.1651fb75.jpg",
+    "static/media/game.fbd4caaf.jpg": "/static/media/game.fbd4caaf.jpg",
+    "static/media/index.scss": "/static/media/main.4163c2de.jpg",
+    "static/media/rules_1.fbd4caaf.jpg": "/static/media/rules_1.fbd4caaf.jpg",
+    "static/media/rules_2.c4ae5fcb.jpg": "/static/media/rules_2.c4ae5fcb.jpg",
+    "static/media/rules_3.15aa3bb2.jpg": "/static/media/rules_3.15aa3bb2.jpg",
+    "static/media/rules_4.dfb4673d.jpg": "/static/media/rules_4.dfb4673d.jpg",
+    "static/media/slick-theme.css": "/static/media/slick.c94f7671.ttf"
   },
   "entrypoints": [
     "static/js/runtime-main.a06e69b5.js",
     "static/css/2.53d92289.chunk.css",
-    "static/js/2.faa7ce1e.chunk.js",
-    "static/css/main.addff1dc.chunk.css",
-    "static/js/main.b2e72db9.chunk.js"
+    "static/js/2.1ee29235.chunk.js",
+    "static/css/main.0b1eb2f5.chunk.css",
+    "static/js/main.48468971.chunk.js"
   ]
 }
