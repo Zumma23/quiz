@@ -12,7 +12,6 @@ const Game: FC = () => {
 
   return (
     <>
-      <h1>Game</h1>
       <Quiz questions={questions} setQuestions={setQuestions} />
     </>
   );
