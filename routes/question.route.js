@@ -18,13 +18,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 router.post("/question", upload.single("image"), async (req, res) => {
-  const {
-    first,
-    second,
-    thrid,
-    correct_answer,
-    image,
-  } = req.body;
+  const { first, second, thrid, correct_answer, image } = req.body;
 
   const questions = new Question({
     correct_answer,

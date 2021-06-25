@@ -4,6 +4,7 @@ const LOGOUT = "LOGOUT";
 const defaultState = {
   currentUser: {},
   isAuth: false,
+  message: "",
 };
 
 export const userReducer = (state = defaultState, action) => {
@@ -26,5 +27,8 @@ export const userReducer = (state = defaultState, action) => {
   }
 };
 
-export const setUser = (user) => ({ type: SET_USER, payload: user });
+export const setUser = (user) => ({
+  type: SET_USER,
+  payload: user,
+});
 export const logout = () => ({ type: LOGOUT });

@@ -6,9 +6,9 @@ interface IScore {
 const Score: FC<IScore> = ({ score }) => {
   return (
     <div>
-      <Link className="footer__social-link" to="/game">
+      <Link className="footer__social-link" to="/">
         {" "}
-        Game
+        Home
       </Link>
       <Link className="footer__social-link" to="/create-questions">
         {" "}

@@ -1,7 +1,6 @@
 @import "../../scss/variables";
 
-
-.category{
+.category {
   &__title {
     color: $gray;
   }
@@ -10,20 +9,17 @@
     background-color: $background;
     border-radius: 15px;
     margin-bottom: 50px;
-    transition: .4s;
+    transition: 0.4s;
 
-  
     &__img {
       padding: 10px;
-      img{
+      img {
         border-radius: 15px;
       }
     }
     &__text {
-      font-size: 40px;
       font-weight: bold;
       color: white;
-     
     }
     &__link {
       font-size: 30px;
@@ -31,15 +27,14 @@
       color: white;
       text-align: end;
       text-decoration: none;
-      transition: .4s;
-      &:hover{
+      transition: 0.4s;
+      &:hover {
         text-decoration: none;
         color: black;
       }
     }
-    &:hover{
+    &:hover {
       background-color: $main_color;
-
     }
   }
 }

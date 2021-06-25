@@ -1,5 +1,5 @@
-import React, { FC, useState } from "react";
-import { useDispatch } from "react-redux";
+import React, { FC, useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import Input from "../../components/Input/Input";
 import { login } from "../../redux/actions/userAction";
 import { Link } from "react-router-dom";
@@ -8,15 +8,13 @@ const Login: FC = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const dispatch = useDispatch();
-  // const useLogin = (email: string, password: string): any => {
-  //   dispatch(login(email, password));
-  // };
 
+  const message = useSelector((state: any) => state.message.message);
   return (
     <>
       <div className="autorization">
         <div className="autorization-wrapper">
-          <h3 className="autorization__title">Log in to your account</h3>
+          <h3 className="autorization__title">{` Log in to your account`}</h3>
           <div className="autorization__items">
             <Input
               value={email}
@@ -30,13 +28,15 @@ const Login: FC = () => {
               type="password"
               placeholder="Password"
             />
+            <h3 className="autorization__title autorization__title--error ">
+              {message}
+            </h3>
             <button
               onClick={() => dispatch(login(email, password))}
               className="autorization__btn button"
             >
               Log In
             </button>
-
             <Link className="autorization__text" to="/registration">
               New to Wizzard Puzzels?
             </Link>

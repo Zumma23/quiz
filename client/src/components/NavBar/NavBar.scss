@@ -90,7 +90,11 @@
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
+  .play,
+  .cabinet {
+    display: none;
+  }
   .nav {
     // background-color: #4D6D9A;
     padding: 20px 0;
@@ -113,7 +117,8 @@
     &__logo-title {
       padding: 5px 15px;
       color: $main_color;
-      font-size: 20px;
+      font-size: 15px;
+
       text-transform: uppercase;
       transition: $transition;
       font-weight: 700;

@@ -13,7 +13,7 @@ const NavBar: FC = () => {
         <div className="container-fluid">
           <div className="nav__inner  ">
             {isAuth ? (
-              <Link to="/cabinet" className="nav__login-title">
+              <Link to="/cabinet" className="nav__login-title cabinet">
                 Cabinet
               </Link>
             ) : (
@@ -25,7 +25,7 @@ const NavBar: FC = () => {
             <div className=" nav__login ">
               {isAuth ? (
                 <>
-                  <Link to="/game" className="nav__login-title">
+                  <Link to="/game" className="nav__login-title play">
                     Play
                   </Link>
                   <Link
@@ -39,7 +39,7 @@ const NavBar: FC = () => {
               ) : (
                 <Link
                   to="/login"
-                  className="nav__login-title"
+                  className="nav__login-title "
                   onClick={() => dispacth(logout())}
                 >
                   Log in

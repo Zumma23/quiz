@@ -5,7 +5,7 @@ const Game: FC = () => {
   const [questions, setQuestions] = useState();
 
   useEffect(() => {
-    axios.get("/api/find").then((res) => {
+    axios.get("http://localhost:5000/api/find").then((res) => {
       setQuestions(res.data);
     });
   }, []);
