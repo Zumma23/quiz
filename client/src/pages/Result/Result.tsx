@@ -1,12 +1,11 @@
-import React,{FC} from "react";
+import React, { FC } from "react";
 
-
-const Result:FC =()=>{
-  return(
+const Result: FC = () => {
+  return (
     <>
-    <h1>Result</h1>
+      <h1>Result</h1>
     </>
-  )
-}
+  );
+};
 
-export default Result
+export default Result;

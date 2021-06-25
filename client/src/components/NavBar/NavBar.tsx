@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { logout } from "../../redux/reducers/userReducer";
 import "./NavBar.scss";
 
-const NavBar = () => {
+const NavBar: FC = () => {
   const isAuth = useSelector((state: any) => state.user.isAuth);
   const dispacth = useDispatch();
   return (
@@ -33,7 +33,7 @@ const NavBar = () => {
                     className="nav__login-title"
                     onClick={() => dispacth(logout())}
                   >
-                   Log out
+                    Log out
                   </Link>
                 </>
               ) : (

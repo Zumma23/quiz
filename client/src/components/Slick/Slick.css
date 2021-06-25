@@ -2,7 +2,7 @@
 .slick-arrow.slick-next {
   position: absolute;
   display: block;
-  background:  #45a29e;
+  background: #45a29e;
   width: 50px;
   height: 50px;
   border-radius: 25px;
@@ -10,10 +10,7 @@
 .slick-list {
   border-radius: 15px;
 }
-.slick-slider {
-  /* background: blue;
-  border: 10px solid rosybrown; */
-}
+
 .slick-arrow.slick-prev {
   left: 20px;
   z-index: 1;
@@ -53,11 +50,6 @@
   font-weight: bold;
 }
 
-.slick-dots {
-  /* top: 90%; */
-  /* background: black; */
-}
-
 .slick-dots li button:before {
   font-family: "slick";
   font-size: 20px;
@@ -75,19 +67,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* .back {
-    width: 17px;
-    height: 17px;
-    background: red;
-    border-radius: 10px;
-    border: 2px solid white;
-} */
-
-.slick-active {
-  /* background: red; */
-  /* border-radius: 10px;
-    border: 2px solid white; */
-}
 */ .slick-dots li {
   position: relative;
   display: inline-block;

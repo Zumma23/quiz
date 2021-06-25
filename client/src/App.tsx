@@ -7,8 +7,8 @@ import { auth } from "./redux/actions/userAction";
 import { authRoutes, publicRouters } from "./routes";
 import { LOGIN_ROUTE, MAIN_ROUTE } from "./utils/consts";
 const App: FC = () => {
-  const [users, setUsers] = useState([]);
-  const [connect, setConnect] = useState(false);
+  const [users, setUsers]: any = useState([]);
+  const [connect, setConnect]: any = useState(false);
   const isAuth = useSelector((state: any) => state.user.isAuth);
 
   const dispatch = useDispatch();
@@ -28,8 +28,7 @@ const App: FC = () => {
 
   useEffect(() => {
     dispatch(auth());
-  }, []);
-  console.log(authRoutes);
+  }, [dispatch]);
   return (
     <div className="App">
       <NavBar />

@@ -1,7 +1,8 @@
 import React, { FC } from "react";
 
-import "./Input.scss"
+import "./Input.scss";
 interface IInput {
+  name?: string;
   type: string;
   placeholder: string;
   value: string;
@@ -12,7 +13,8 @@ const Input: FC<IInput> = (props) => {
   return (
     <>
       <input
-      className="input"
+        name={props.name}
+        className="input"
         onChange={(e) => props.setValue(e.target.value)}
         value={props.value}
         type={props.type}

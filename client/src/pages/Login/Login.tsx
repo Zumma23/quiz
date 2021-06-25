@@ -1,18 +1,16 @@
-import axios from "axios";
-import React, { FC, useState, useEffect } from "react";
+import React, { FC, useState } from "react";
 import { useDispatch } from "react-redux";
 import Input from "../../components/Input/Input";
 import { login } from "../../redux/actions/userAction";
 import { Link } from "react-router-dom";
 import "./Login.scss";
-import Button from "../../components/Button/Button";
 const Login: FC = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const dispatch = useDispatch();
-  const useLogin = (email:string,password:string):any=>{
-    dispatch(login(email, password))
-  }
+  // const useLogin = (email: string, password: string): any => {
+  //   dispatch(login(email, password));
+  // };
 
   return (
     <>
@@ -38,8 +36,10 @@ const Login: FC = () => {
             >
               Log In
             </button>
-           
-            <Link className="autorization__text" to="/registration">New to Wizzard Puzzels?</Link>
+
+            <Link className="autorization__text" to="/registration">
+              New to Wizzard Puzzels?
+            </Link>
           </div>
         </div>
       </div>
