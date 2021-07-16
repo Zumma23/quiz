@@ -30,7 +30,7 @@ const Quiz = ({ questions, setQuestions }) => {
             <h1 className="game-wrapper__suptitle">
               Question {currentQuestion + 1}/{questions.length}
             </h1>
-            {/* <h1 className="game-wrapper__subtitle"> {questions[currentQuestion].question}</h1> */}
+
             <h2 className="game-wrapper__score">Score {score}</h2>
           </div>
           <Question
@@ -45,18 +45,10 @@ const Quiz = ({ questions, setQuestions }) => {
           />
         </div>
       ) : (
-        <CircularProgress />
+        <div>
+          <CircularProgress />
+        </div>
       )}
-      {/* <Question
-        currQues={currentQuestion}
-        setCurrQues={setCurrentQuestion}
-        options={answers}
-        correct={correct}
-        score={score}
-        setScore={setScore}
-        questions={questions}
-        setQuestions={setQuestions}
-      /> */}
     </>
   );
 };

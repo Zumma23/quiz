@@ -1,7 +1,7 @@
-import React, { FC, useState, useEffect } from "react";
+import React, { FC, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Input from "../../components/Input/Input";
-import { login } from "../../redux/actions/userAction";
+import { login } from "../../redux/actions/user";
 import { Link } from "react-router-dom";
 import "./Login.scss";
 const Login: FC = () => {

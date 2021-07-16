@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 interface IScore {
   score: string;
 }
-const Score: FC<IScore> = ({ score }) => {
+const Score: FC<IScore> = () => {
   return (
     <div>
       <Link className="footer__social-link" to="/">

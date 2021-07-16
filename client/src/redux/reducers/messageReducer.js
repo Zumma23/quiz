@@ -1,7 +1,9 @@
 const MESSAGE = "MESSAGE";
+const REDIRECT = "REDIRECT";
 
 const initialState = {
   message: "",
+  redirect: false,
 };
 
 export const messageReducer = (state = initialState, action) => {
@@ -11,13 +13,22 @@ export const messageReducer = (state = initialState, action) => {
         ...state,
         message: action.payload,
       };
+    case REDIRECT:
+      return {
+        ...state,
+        redirect: action.payload,
+      };
 
     default:
       return state;
   }
 };
 
-export const setMessage = (message) => ({
+export const setMessage = (payload) => ({
   type: MESSAGE,
-  payload: message,
+  payload,
+});
+export const setRedirect = (payload) => ({
+  type: REDIRECT,
+  payload,
 });

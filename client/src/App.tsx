@@ -1,33 +1,18 @@
-import React, { FC, useState, useEffect } from "react";
+import React, { FC, useEffect } from "react";
 import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
 import { useSelector, useDispatch } from "react-redux";
 import { Switch, Redirect, Route } from "react-router-dom";
-import { auth } from "./redux/actions/userAction";
+import { authCheck } from "./redux/actions/user";
 import { authRoutes, publicRouters } from "./routes";
 import { LOGIN_ROUTE, MAIN_ROUTE } from "./utils/consts";
 const App: FC = () => {
-  const [users, setUsers]: any = useState([]);
-  const [connect, setConnect]: any = useState(false);
-  const isAuth = useSelector((state: any) => state.user.isAuth);
+  const { isAuth } = useSelector((state: any) => state.user);
 
   const dispatch = useDispatch();
 
   useEffect(() => {
-    fetch("https://stormy-peak-20800.herokuapp.com/api/auth/users")
-      .then((res) => {
-        if (res.ok) {
-          return res.json();
-        }
-      })
-      .then((json) => {
-        setUsers(json);
-        setConnect(true);
-      });
-  }, []);
-
-  useEffect(() => {
-    dispatch(auth());
+    dispatch(authCheck());
   }, [dispatch]);
   return (
     <div className="App">
@@ -43,7 +28,6 @@ const App: FC = () => {
         {isAuth && <Redirect to={MAIN_ROUTE} />}
         <Redirect to={LOGIN_ROUTE} />
       </Switch>
-      {/* <AppRouter/> */}
       <Footer />
     </div>
   );
